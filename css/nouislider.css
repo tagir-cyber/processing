@@ -1,0 +1,39 @@
+.noUi-horizontal .noUi-handle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: -8px;
+}
+
+.noUi-base, .noUi-connects {
+    width: calc(100% - 17px);
+    height: 1px;
+    /* background-color: red; */
+}
+
+.noUi-horizontal {
+    height: 1px;
+    /* top: 8px; */
+}
+
+.noUi-horizontal .noUi-origin {
+    height: 1px;
+    background-color: #098FCF;
+}
+
+.noUi-target {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+    display: none;
+}
+
+.noUi-handle {
+    box-shadow: none;
+    background-color: #098FCF;
+    border: none;
+    cursor: pointer;
+}

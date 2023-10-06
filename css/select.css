@@ -1,0 +1,39 @@
+.choices[data-type*=select-one]::after {
+    border: none;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: calc(50% - 9px);
+}
+
+.choices[data-type*=select-one]::after {
+    margin: 0;
+    right: 15px;
+}
+
+.choices[data-type*=select-one].is-open::after {
+    margin: 0;
+}
+
+@media (min-width: 640px){
+    .choices__list--dropdown .choices__item--selectable::after, .choices__list[aria-expanded] .choices__item--selectable::after {
+        display: none;
+    }
+}
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: transform, .3s;
+    transition: opacity .2s;
+}
+
+.is-active.choices__list--dropdown,
+.is-active.choices__list[aria-expanded] {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0%);
+}
